@@ -1,4 +1,3 @@
-# dicos pour l'instant mais à changer en classes ?
 
 max = 64
 SEQ = {}
