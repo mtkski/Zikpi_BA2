@@ -1,13 +1,14 @@
 # dicos pour l'instant mais à changer en classes ?
 
+max = 64
 SEQ = {}
-for i in range(1,65):
+for i in range(1,max+1):
     PARAM = {"note":0, "gate":0, "cv1":0, "cv2":0, "cv3":0, "cv4":0}
     SEQ["pas"+str(i)] = PARAM
 
 # SEQ['pas1']['note'] = 1 pour modifier (exemple)
 
-GEN = {"long":0, "bpm":0, "gamme":0}
+GEN = {"long":0, "bpm":0, "gamme":0, "actuel" : [1,1]}
 
 
 # pins et autres (adapter avec le produit de philippe)
@@ -15,7 +16,7 @@ GEN = {"long":0, "bpm":0, "gamme":0}
 # Définit les pins utilisés par les encodeurs
 Encodeur = {
     "encodeur_NOTE" : [5,6,None],
-    "encodeur_GATE" : [0,11,None],
+    "encodeur_GATE" : [10,11,None],
     "encodeur_CV1" : [20,21,None],
     "encodeur_CV2" : [12,16,None],
     "encodeur_CV3" : [8,7,None],
