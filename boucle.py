@@ -1,6 +1,8 @@
 #Les imports
 import RPi.GPIO as GPIO
 from CONFIG import Encodeur, Bouton, GEN, SEQ
+import Class_Button
+import Class_Encoder
 
 # Pour déterminer quel système de numérotation des pins on utilise
 GPIO.setmode(GPIO.BCM)
