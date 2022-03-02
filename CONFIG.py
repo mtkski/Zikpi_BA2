@@ -39,6 +39,3 @@ Bouton = {
     "bouton_PREV" : 27,
     "bouton_NEXT" : 17,
         }
-
-# écran
-# pas les bonnes versions sur github 
