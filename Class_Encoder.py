@@ -63,27 +63,27 @@ class Encoder:
                     gen["gam"] += float("{}1".format(signe))
 
         elif self.name == "encodeur_NOTE":
-            if 1 <= seq["pas".format(actuel[0])]["note"] + float("{}204.8".format(signe)) <= 4096:
-                seq["pas".format(actuel[0])]["note"] += float("{}204.8".format(signe))
+            if 1 <= seq["pas{}".format(actuel[0])]["note"] + float("{}204.8".format(signe)) <= 4096:
+                seq["pas{}".format(actuel[0])]["note"] += float("{}204.8".format(signe))
 
         elif self.name == "encodeur_GATE":
-            if 1 <= seq["pas".format(actuel[0])]["gate"] + float("{}204.8".format(signe)) <= 4096:
-                seq["pas".format(actuel[0])]["gate"] += float("{}204.8".format(signe))
+            if 1 <= seq["pas{}".format(actuel[0])]["gate"] + float("{}204.8".format(signe)) <= 4096:
+                seq["pas{}".format(actuel[0])]["gate"] += float("{}204.8".format(signe))
 
         elif self.name == "encodeur_CV1":
-            if 1 <= seq["pas".format(actuel[0])]["cv1"] + float("{}204.8".format(signe)) <= 4096:
-                seq["pas".format(actuel[0])]["cv1"] += float("{}204.8".format(signe))
+            if 1 <= seq["pas{}".format(actuel[0])]["cv1"] + float("{}204.8".format(signe)) <= 4096:
+                seq["pas{}".format(actuel[0])]["cv1"] += float("{}204.8".format(signe))
 
         elif self.name == "encodeur_CV2":
-            if 1 <= seq["pas".format(actuel[0])]["cv2"] + float("{}204.8".format(signe)) <= 4096:
-                seq["pas".format(actuel[0])]["cv2"] += float("{}204.8".format(signe))
+            if 1 <= seq["pas{}".format(actuel[0])]["cv2"] + float("{}204.8".format(signe)) <= 4096:
+                seq["pas{}".format(actuel[0])]["cv2"] += float("{}204.8".format(signe))
 
         elif self.name == "encodeur_CV3":
-            if 1 <= seq["pas".format(actuel[0])]["cv3"] + float("{}204.8".format(signe)) <= 4096:
-                seq["pas".format(actuel[0])]["cv3"] += float("{}204.8".format(signe))
+            if 1 <= seq["pas{}".format(actuel[0])]["cv3"] + float("{}204.8".format(signe)) <= 4096:
+                seq["pas{}".format(actuel[0])]["cv3"] += float("{}204.8".format(signe))
 
         elif self.name == "encodeur_CV4":
-            if 1 <= seq["pas".format(actuel[0])]["cv4"] + float("{}204.8".format(signe)) <= 4096:
-                seq["pas".format(actuel[0])]["cv4"] += float("{}204.8".format(signe))
+            if 1 <= seq["pas{}".format(actuel[0])]["cv4"] + float("{}204.8".format(signe)) <= 4096:
+                seq["pas{}".format(actuel[0])]["cv4"] += float("{}204.8".format(signe))
 
         return gen, seq
