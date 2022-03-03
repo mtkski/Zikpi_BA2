@@ -45,8 +45,8 @@ class Encoder:
 
     # IN : le signe de la modification +/- qui change si on tourne l'encodeur à gauche ou à droite
     #       et les dictionnaires de valeur GEN et SEQ (voir CONFIG.py)
-    # Modifie les valeurs dans les dictionnaires de valeur GEN et SEQ
-    def dictionary_modification(self, signe, gen, seq):
+    # Fait les actions spécifique aux encodeurs. Par exemple en modifiant les valeurs dans les dictionnaires de valeur GEN et SEQ
+    def action_spe(self, signe, gen, seq):
         actuel = gen["actuel"]
         gam = self.liste_gam[gen["gam"]-1]
 
