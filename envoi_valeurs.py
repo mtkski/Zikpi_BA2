@@ -3,13 +3,6 @@ tca = I2C.get_i2c_device(address=0x70)
 import Adafruit_MCP4725
 import time
 
-def tca_select(channel):                    #marche pas bien
-    """
-    Select an individual channel.
-    """
-    if channel > 7:
-        return
-    tca.writeRaw8(1 << channel)
 
 def tca_set(mask):
     """Select one or more channels.
@@ -36,7 +29,29 @@ print(SEQ)
 
 duree_pas = bpm_to_ms(int(60))
 
-for i in range(1,9) :
+""""when playpas is pressed
+tca_set(0b0000100)                       # cv1
+    dac.set_voltage(SEQ['pas'+ i ]['cv1'])
+
+    tca_set(0b0001000)                       # cv2
+    dac.set_voltage(SEQ['pas' + i]['cv2'])
+
+    tca_set(0b0010000)                       # cv3
+    dac.set_voltage(SEQ['pas' + i]['cv3'])
+
+    tca_set(0b0100000)                       # cv4
+    dac.set_voltage(SEQ['pas' + i]['cv4'])
+
+    tca_set(0b0100000)                       # note
+    dac.set_voltage(SEQ['pas' + i]['note'])
+
+    tca_set(0b0100000)                       # gate
+    dac.set_voltage(4096)
+    time.sleep(SEQ['pas' + i]['gate'] * duree_pas)
+    dac.set_voltage(0)
+"""
+#for play press
+for i in range(1,9) : #play
     tca_set(0b0000100)                       # cv1
     dac.set_voltage(SEQ['pas'+ i ]['cv1'])
 
