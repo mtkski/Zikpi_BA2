@@ -1,3 +1,6 @@
+#les imports
+from Class_Note import Note
+
 # Classe définissant les encodeurs
 class Encoder:
 
