@@ -30,7 +30,7 @@ val = [0,0,0,0,0,0,0]
 # Définit les paliers en fonction des encodeurs
 step = [int(4096/(12*5)),1,1,1,1,1,1]
 
-# pDéfinit l'intervalle des encodeurs
+# Définit l'intervalle des encodeurs
 interval = [(0,4096),(0,1),(0,4096),(0,4096),(0,4096),(0,4096),(0,4096)]
 
 # Définit les pins utilisés par les Boutons
