@@ -35,8 +35,8 @@ interval = [(0,4096),(0,1),(0,4096),(0,4096),(0,4096),(0,4096),(0,4096)]
 
 # Définit les pins utilisés par les Boutons
 Bouton = {
-    "bouton_PLAYPAS" : 10,
-    "bouton_PLAY" : 22,
-    "bouton_PREV" : 27,
-    "bouton_NEXT" : 17,
+    "bouton_PLAYPAS" : 23,
+    "bouton_PLAY" : 18,
+    "bouton_PREV" : 15,
+    "bouton_NEXT" : 14,
         }
