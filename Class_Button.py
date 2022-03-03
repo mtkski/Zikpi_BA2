@@ -18,8 +18,8 @@ class Button:
             return "button pressed"
 
     # IN : le dictionnaires de valeur GEN (voir CONFIG.py)
-    # Modifie la valeurs "actuel" dans le dictionnaires de valeur GEN
-    def dictionary_modification(self, gen):
+    # Lance les actions spécifique des boutons. Par exemple en modifiant la valeurs "actuel" dans le dictionnaires de valeur GEN
+    def action_spe(self, gen):
         pas_max = gen["long"]
 
         if self.name == "bouton_PREV":
