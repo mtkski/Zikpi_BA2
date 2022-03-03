@@ -15,7 +15,7 @@ GEN = {"long":64, "bpm":250, "gamme":1, "actuel" : [1,1]}
 
 # Définit les pins utilisés par les encodeurs
 Encodeur = {
-    "encodeur_NOTE" : [5,6,None],
+    "encodeur_NOTE" : [5,6,10],
     "encodeur_GATE" : [9,11,None],
     "encodeur_CV1" : [20,21,None],
     "encodeur_CV2" : [12,16,None],
