@@ -2,7 +2,6 @@ from Adafruit_GPIO import I2C
 tca = I2C.get_i2c_device(address=0x70)
 import Adafruit_MCP4725
 import time
-teub
 
 def tca_set(mask):
     """Select one or more channels.
