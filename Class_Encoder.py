@@ -1,5 +1,7 @@
 #les imports
 from Class_Note import Note
+import RPi.GPIO as GPIO
+from time import sleep
 
 # Classe définissant les encodeurs
 class Encoder:
@@ -35,12 +37,14 @@ class Encoder:
                 while not (clkvalue == 1 and dtvalue == 1):
                     clkvalue = GPIO.input(self.clk)
                     dtvalue = GPIO.input(self.dt)
+                sleep(0.2)
                 return "rotated clockwise"
 
             elif clkvalue == 1 and dtvalue == 0:
                 while not (clkvalue == 1 and dtvalue == 1):
                     clkvalue = GPIO.input(self.clk)
                     dtvalue = GPIO.input(self.dt)
+                sleep(0.2)
                 return "rotated counter-clockwise"
 
     # IN : le signe de la modification +/- qui change si on tourne l'encodeur à gauche ou à droite

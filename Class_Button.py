@@ -1,3 +1,7 @@
+# Les imports
+import RPi.GPIO as GPIO
+from time import sleep
+
 # Classe définissant les boutons
 class Button:
 
