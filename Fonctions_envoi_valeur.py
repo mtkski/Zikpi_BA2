@@ -16,3 +16,7 @@ def tca_set(mask):
 def bpm_to_s(bpm):
     s = (60 / bpm) 
     return s
+
+def pourcent_to_DAC(pourcent) :
+    valeur_dac = (4096/100) * pourcent
+    return valeur_dac

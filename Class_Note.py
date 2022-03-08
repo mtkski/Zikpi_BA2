@@ -57,14 +57,14 @@ class Note:
     # IN : le symbole de la note
     # Construit un dictionnaire avec les symboles comme clé et les valeurs dac en valeur dico. Cherche ensuite le symbole entré dans la fonction et renvoie sa valeur
     # OUT : Valeur DAC de la note
-    def traduction_note_DAC(self, symbole):
+    def traduction_note_to_DAC(self, symbole):
         dico_note = {}
 
         for i in range(1,61,1):
             Lettre_note = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
             octave = int((i) / 12 + 0.99)
             lettre = i % 12
-            valeur_dac = i * (4096/60)
-            dico_note[Lettre_note[lettre - 1] + str(octave)] = valeur_dac
+            valeur_dac = i * (4096/59)
+            dico_note[Lettre_note[lettre - 1] + str(octave)] = valeur_dac - (4096/59)
 
         return dico_note.get(symbole)
