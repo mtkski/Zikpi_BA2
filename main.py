@@ -1,5 +1,6 @@
 #Les imports
 import RPi.GPIO as GPIO
+from time import sleep
 from CONFIG import Encodeur, Bouton, GEN, SEQ
 from Class_Button import Button
 from Class_Encoder import Encoder
@@ -43,14 +44,21 @@ while True:
     for encoder in encoder_list:
         if encoder.motion_sensor() == "button pressed":
             GEN, SEQ = encoder.action_spe(None, GEN, SEQ)
+            print('encoder pressed')
+            print(SEQ['pas1'])
 
         elif encoder.motion_sensor() == "rotated clockwise":
             GEN, SEQ = encoder.action_spe("+", GEN, SEQ)
+            print('clockwise')
+            print(SEQ['pas1'])
 
         elif encoder.motion_sensor() == "rotated counter-clockwise":
             GEN, SEQ = encoder.action_spe("-", GEN, SEQ)
+            print('conter-clockwise')
+            print(SEQ['pas1'])
 
     for button in button_list:
         if button.motion_sensor() == "button pressed":
             GEN = button.action_spe(GEN)
+            print('button pressed')
 
