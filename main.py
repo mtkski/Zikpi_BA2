@@ -54,3 +54,4 @@ while True:
         if button.motion_sensor() == "button pressed":
             GEN = button.action_spe(GEN)
 
+#zebi
