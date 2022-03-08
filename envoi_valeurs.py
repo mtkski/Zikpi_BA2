@@ -91,3 +91,4 @@ while True :
 tca_set(0b00000010)
 dac.set_voltage(0)
 #test bnidon
+#dfgeg
