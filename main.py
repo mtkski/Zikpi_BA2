@@ -1,7 +1,7 @@
 #Les imports
 import RPi.GPIO as GPIO
 import threading
-from CONFIG import Encodeur, Bouton, GEN, SEQ
+from CONFIG import *
 from Class_Encoder import Encoder
 from Class_Note import Note
 from gpiozero import Button

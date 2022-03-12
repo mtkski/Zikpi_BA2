@@ -41,7 +41,7 @@ class Encoder:
 
                 self.etat = 'button encoder pressed'
                 print(self.name, 'Button encoder pressed') # print
-                sleep(0.5)
+                sleep(0.2)
 
         if actualvalue != self.LastValue:
             if clkvalue == 0 and dtvalue == 1:

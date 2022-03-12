@@ -28,3 +28,13 @@ Bouton = {
     "bouton_PREV" : 15,
     "bouton_NEXT" : 14,
         }
+
+Etat_encodeur = {
+    "encodeur_NOTE" : None,
+    "encodeur_GATE" : None,
+    "encodeur_CV1" : None,
+    "encodeur_CV2" : None,
+    "encodeur_CV3" : None,
+    "encodeur_CV4" : None,
+    "encodeur_PARAM" : None
+    }
