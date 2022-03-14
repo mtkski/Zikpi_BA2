@@ -57,17 +57,17 @@ def pressed_next():
     GEN["actuel"][0] =  (GEN["actuel"][0] + 1) % (GEN["long"] +1)
     if GEN["actuel"][0] == 0:
         GEN["actuel"][0] = 1
-    print(GEN["actuel"])
+    print(GEN["actuel"]) # print
     affichervaleurs('pas' + str(GEN['actuel'][0]))
         
 def pressed_prev():
     GEN["actuel"][0] -= 1
     if GEN["actuel"][0] == 0:
         GEN["actuel"][0] = GEN['long']
-    print(GEN["actuel"])
+    print(GEN["actuel"]) # print
     affichervaleurs('pas' + str(GEN['actuel'][0]))
     
-print(GEN["actuel"])
+print(GEN["actuel"]) # print
 
 thread_list = []
 for encoder in encoder_dico.values():
@@ -77,7 +77,7 @@ for encoder in encoder_dico.values():
 
 # Boucle
 while True:
-
+    '''
     for file in fichier_dico.values() :
         Etat_encodeur = file.lecture_etat(Etat_encodeur)
         
@@ -87,18 +87,19 @@ while True:
         
         if state == 'button encoder pressed':
             GEN, SEQ = encoder.action_spe(None, GEN, SEQ)
-            print(SEQ['pas1'])
+            print(SEQ['pas{}'.format(GEN['actuel'][0])]) # print
             affichervaleurs('pas' + str(GEN['actuel'][0]))
 
         elif state == "rotated clockwise":
             GEN, SEQ = encoder.action_spe("+", GEN, SEQ)
-            print(SEQ['pas1'])
+            print(SEQ['pas{}'.format(GEN['actuel'][0])]) # print
             affichervaleurs('pas' + str(GEN['actuel'][0]))
 
         elif state == "rotated counter-clockwise":
             GEN, SEQ = encoder.action_spe("-", GEN, SEQ)
-            print(SEQ['pas1'])
+            print(SEQ['pas{}'.format(GEN['actuel'][0])]) # print
             affichervaleurs('pas' + str(GEN['actuel'][0]))
+    '''
 
     bouton_play.when_pressed = pressed_play
     bouton_playpas.when_pressed = pressed_playpas

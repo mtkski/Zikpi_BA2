@@ -29,7 +29,7 @@ class Encoder:
     def motion_sensor(self):
         while True :
             global GEN, SEQ
-            fichier = fichier_dico[self.name]
+            #fichier = fichier_dico[self.name]
             #self.etat = None
             check = 0
             clkvalue = GPIO.input(self.clk)
@@ -43,7 +43,7 @@ class Encoder:
                         buttonvalue = GPIO.input(self.sw)
     
                     #self.etat = 'button encoder pressed'
-                    fichier.ecriture_etat('Button encoder pressed')
+                    #fichier.ecriture_etat('Button encoder pressed')
                     print(self.name, 'Button encoder pressed') # print
                     sleep(0.2)
     
@@ -56,7 +56,7 @@ class Encoder:
     
                     if check > 1000 :
                         #self.etat = 'rotated clockwise'
-                        fichier.ecriture_etat('rotated clockwise')
+                        #fichier.ecriture_etat('rotated clockwise')
                         print(self.name, 'rotated clockwise') # print
                         sleep(0.2)
     
@@ -68,7 +68,7 @@ class Encoder:
     
                     if check > 1000 :
                         #self.etat = 'rotated counter-clockwise'
-                        fichier.ecriture_etat('rotated counter-clockwise')
+                        #fichier.ecriture_etat('rotated counter-clockwise')
                         print(self.name, 'rotated counter-clockwise') # print
                         sleep(0.2)
 
