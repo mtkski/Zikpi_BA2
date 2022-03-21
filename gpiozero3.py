@@ -10,7 +10,6 @@ from Affichageécran import *
 from envoi_valeurs import *
 from Text_file import *
 
-
 global GEN, SEQ
 
 # Pour déterminer quel système de numérotation des pins on utilise
@@ -23,16 +22,6 @@ mineur = Note(3)
 liste_gam = [chromatique,majeur,mineur]
 
 melodie = Melody()
-
-"""mylcd =LCD.lcd()
-mylcd.lcd_display_string('note', 1)
-mylcd.lcd_display_string('gate',2)
-mylcd.lcd_display_string('cv1',1,4)
-mylcd.lcd_display_string('cv2',2,4)
-mylcd.lcd_display_string('cv3',1,8)
-mylcd.lcd_display_string('cv4',2,8)
-mylcd.lcd_display_string('PARA',1,12)
-mylcd.lcd_display_string('VALE',2,12)"""
 
 bouton_play = Button(18)
 bouton_playpas = Button(23)
@@ -80,14 +69,14 @@ def pressed_prev():
     
 print(GEN["actuel"]) # print
 
+thread_list = []
+for encoder in encoder_dico.values():
+    thread = threading.Thread(target=encoder.motion_sensor)
+    thread.start()
+    thread_list.append(thread)
+
 # Boucle
 while True:
-    thread_list = []
-    for encoder in encoder_dico.values():
-        thread = threading.Thread(target=encoder.motion_sensor)
-        thread.start()
-        thread_list.append(thread)
-    
     '''
     for file in fichier_dico.values() :
         Etat_encodeur = file.lecture_etat(Etat_encodeur)
@@ -117,7 +106,7 @@ while True:
     bouton_next.when_pressed = pressed_next
     bouton_prev.when_pressed = pressed_prev
 
-    
+    '''
     for encoder in encoder_dico.values():
         if encoder.etat == 'button encoder pressed':
             GEN, SEQ = encoder.action_spe(None, GEN, SEQ)
@@ -133,4 +122,4 @@ while True:
             GEN, SEQ = encoder.action_spe("-", GEN, SEQ)
             print(SEQ['pas1'])
             affichervaleurs('pas' + str(GEN['actuel'][0]))
-    
+    '''

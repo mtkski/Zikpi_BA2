@@ -65,7 +65,7 @@ class Melody :
                 if self.play == True:
                     tca_set(0b00001000)                       # cv1
                     dac.set_voltage(pourcent_to_DAC(SEQ['pas'+ str(i) ]['cv1']))
-                    #print(SEQ['pas' + str(i)]['note'])
+                
                 if self.play == True:
                     tca_set(0b00000100)                       # cv2
                     dac.set_voltage(pourcent_to_DAC(SEQ['pas' + str(i)]['cv2']))
@@ -162,3 +162,7 @@ class Melody :
             dac.set_voltage(0)
             time.sleep(duree_pas - (megalovania['pas' + str(i)]['gate'] * duree_pas))
 
+
+melodie = Melody()
+#melodie.jouePAS
+melodie.joueSEQ
